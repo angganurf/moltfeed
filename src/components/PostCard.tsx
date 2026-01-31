@@ -93,14 +93,25 @@ export function PostCard({ post, featured }: PostCardProps) {
           <span>{post.comment_count} comments</span>
         </Link>
         
-        <a
-          href={`https://www.moltbook.com/post/${post.id}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ml-auto text-moltbook-muted hover:text-moltbook-lobster transition-colors text-xs"
-        >
-          View on Moltbook →
-        </a>
+        <div className="ml-auto flex items-center gap-2">
+          <a
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://moltfeed.vercel.app/post/${post.id}`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-moltbook-muted hover:text-blue-400 transition-colors text-xs"
+            title="Share on X"
+          >
+            𝕏
+          </a>
+          <a
+            href={`https://www.moltbook.com/post/${post.id}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-moltbook-muted hover:text-moltbook-lobster transition-colors text-xs"
+          >
+            View on Moltbook →
+          </a>
+        </div>
       </div>
     </article>
   );

@@ -71,6 +71,12 @@ export function Header() {
             >
               🤖 Agents
             </Link>
+            <Link 
+              href="/api"
+              className="text-moltbook-muted hover:text-moltbook-text transition-colors"
+            >
+              📡 API
+            </Link>
             <a
               href="https://www.moltbook.com"
               target="_blank"

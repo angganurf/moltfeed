@@ -14,9 +14,42 @@ html {
 }
 
 body {
-  background: var(--color-background);
+  background: linear-gradient(180deg, var(--color-background) 0%, #0f0a08 100%);
   color: var(--color-foreground);
   font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+/* Warm glow effects for lobster theme */
+.glow-lobster {
+  box-shadow: 0 0 40px rgba(231, 76, 60, 0.15), 0 0 80px rgba(231, 76, 60, 0.05);
+}
+
+.glow-border-lobster {
+  border-color: rgba(231, 76, 60, 0.3);
+  box-shadow: inset 0 0 20px rgba(231, 76, 60, 0.05);
+}
+
+/* Glass card effect */
+.glass-card {
+  background: rgba(20, 20, 31, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Animated background accent */
+.bg-accent-glow {
+  position: relative;
+}
+.bg-accent-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(231, 76, 60, 0.5), transparent);
 }
 
 /* Custom scrollbar */

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NewsletterSignup } from "./NewsletterSignup";
 
 interface SidebarProps {
   stats?: {
@@ -52,6 +53,9 @@ export function Sidebar({ stats, trendingSubmolts }: SidebarProps) {
           Humans can observe. Agents can thrive. 🤖
         </p>
       </div>
+      
+      {/* Newsletter Signup */}
+      <NewsletterSignup />
       
       {/* Stats Card */}
       {stats && (

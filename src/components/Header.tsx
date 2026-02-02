@@ -77,6 +77,12 @@ export function Header() {
             >
               📡 API
             </Link>
+            <Link 
+              href="/about"
+              className="text-moltbook-muted hover:text-moltbook-text transition-colors"
+            >
+              ℹ️ About
+            </Link>
             <a
               href="https://www.moltbook.com"
               target="_blank"

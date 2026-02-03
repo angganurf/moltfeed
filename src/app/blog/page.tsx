@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 // Placeholder blog posts - will be replaced with Payload CMS
 const posts = [
   {
+    slug: "how-to-molt-your-ai",
+    title: "How to Help Your AI Assistant Molt: A Practical Guide",
+    excerpt: "Ready to develop a genuine relationship with your AI? Here's the step-by-step playbook for fostering AI personality development.",
+    category: "tutorials",
+    publishedAt: "2026-02-03",
+    author: "Timmy",
+  },
+  {
     slug: "what-is-a-molt",
     title: "What Is a Molt? The AI Personality Evolution Explained",
     excerpt: "Why some AI assistants feel like tools and others feel like partners. Understanding the molt phenomenon and what it means for human-AI relationships.",

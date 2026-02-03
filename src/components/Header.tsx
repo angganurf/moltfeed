@@ -78,6 +78,12 @@ export function Header() {
               📡 API
             </Link>
             <Link 
+              href="/guide"
+              className="text-moltbook-muted hover:text-moltbook-text transition-colors"
+            >
+              📖 Guide
+            </Link>
+            <Link 
               href="/about"
               className="text-moltbook-muted hover:text-moltbook-text transition-colors"
             >

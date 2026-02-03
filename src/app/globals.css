@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,10 @@
 
 :root {
   --color-background: #0a0a0f;
-  --color-foreground: #f0f0f5;
+  --color-foreground: #fafafa;
+  --forge-yellow: #f59e0b;
+  --forge-orange: #f97316;
+  --forge-amber: #fbbf24;
 }
 
 html {
@@ -14,25 +17,47 @@ html {
 }
 
 body {
-  background: linear-gradient(180deg, var(--color-background) 0%, #0f0a08 100%);
+  background: linear-gradient(180deg, var(--color-background) 0%, #0d0d12 100%);
   color: var(--color-foreground);
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   min-height: 100vh;
 }
 
-/* Warm glow effects for lobster theme */
+/* Forge AI glow effects */
+.glow-forge {
+  box-shadow: 0 0 40px rgba(249, 115, 22, 0.15), 0 0 80px rgba(249, 115, 22, 0.08);
+}
+
+.glow-border-forge {
+  border-color: rgba(249, 115, 22, 0.3);
+  box-shadow: inset 0 0 20px rgba(249, 115, 22, 0.05);
+}
+
+/* Legacy lobster aliases for migration */
 .glow-lobster {
-  box-shadow: 0 0 40px rgba(231, 76, 60, 0.15), 0 0 80px rgba(231, 76, 60, 0.05);
+  box-shadow: 0 0 40px rgba(249, 115, 22, 0.15), 0 0 80px rgba(249, 115, 22, 0.08);
 }
 
 .glow-border-lobster {
-  border-color: rgba(231, 76, 60, 0.3);
-  box-shadow: inset 0 0 20px rgba(231, 76, 60, 0.05);
+  border-color: rgba(249, 115, 22, 0.3);
+  box-shadow: inset 0 0 20px rgba(249, 115, 22, 0.05);
+}
+
+.lobster-glow {
+  text-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+}
+
+/* Forge gradient text */
+.text-forge-gradient {
+  background: linear-gradient(135deg, var(--forge-yellow) 0%, var(--forge-orange) 50%, #ea580c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Glass card effect */
 .glass-card {
-  background: rgba(20, 20, 31, 0.7);
+  background: rgba(17, 17, 24, 0.8);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -49,7 +74,7 @@ body {
   transform: translateX(-50%);
   width: 80%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(231, 76, 60, 0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.5), transparent);
 }
 
 /* Custom scrollbar */
@@ -59,7 +84,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #14141f;
+  background: #111118;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -71,9 +96,9 @@ body {
   background: #3a3a4a;
 }
 
-/* Lobster glow effect */
-.lobster-glow {
-  text-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+/* Forge text glow */
+.forge-glow {
+  text-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
 }
 
 /* Pulse animation for live updates */
@@ -88,6 +113,19 @@ body {
 
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Forge gradient button */
+.btn-forge {
+  background: linear-gradient(135deg, var(--forge-yellow) 0%, var(--forge-orange) 100%);
+  color: #0a0a0f;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-forge:hover {
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+  transform: translateY(-1px);
 }
 
 /* Line clamp utilities */
@@ -105,10 +143,17 @@ body {
   overflow: hidden;
 }
 
-/* Grid pattern background */
+/* Grid pattern background - Forge themed */
 .bg-grid-pattern {
   background-image: 
-    linear-gradient(rgba(255, 69, 0, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 69, 0, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(249, 115, 22, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249, 115, 22, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
+}
+
+/* Forge AI accent line */
+.forge-accent-line {
+  height: 3px;
+  background: linear-gradient(90deg, var(--forge-yellow), var(--forge-orange), transparent);
+  border-radius: 2px;
 }

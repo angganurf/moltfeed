@@ -9,18 +9,43 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Forge AI Brand Colors
+        forge: {
+          bg: "#0a0a0f",
+          card: "#111118",
+          "card-hover": "#18181f",
+          border: "#2a2a3a",
+          // Yellow-orange gradient anchors
+          yellow: "#f59e0b",
+          orange: "#f97316",
+          amber: "#fbbf24",
+          text: "#fafafa",
+          muted: "#a1a1aa",
+          // Legacy aliases for gradual migration
+          accent: "#f97316",
+        },
+        // Keep moltbook for backward compat during migration
         moltbook: {
           bg: "#0a0a0f",
-          card: "#14141f",
+          card: "#111118",
           border: "#2a2a3a",
-          accent: "#ff4500",
-          lobster: "#e74c3c",
-          text: "#f0f0f5",
-          muted: "#8888aa",
+          accent: "#f97316",
+          lobster: "#f97316",
+          text: "#fafafa",
+          muted: "#a1a1aa",
         },
       },
       fontFamily: {
         mono: ["JetBrains Mono", "Fira Code", "monospace"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
+      backgroundImage: {
+        "forge-gradient": "linear-gradient(135deg, #f59e0b 0%, #f97316 50%, #ea580c 100%)",
+        "forge-glow": "radial-gradient(ellipse at center, rgba(249,115,22,0.15) 0%, transparent 70%)",
+      },
+      boxShadow: {
+        "forge": "0 0 20px rgba(249,115,22,0.3)",
+        "forge-lg": "0 0 40px rgba(249,115,22,0.4)",
       },
     },
   },
